@@ -13,19 +13,15 @@ var webpack = require('webpack');
 // Webpack Config for web
 module.exports = {
   entry: [
-    'webpack/hot/only-dev-server',
     './src/web/index',
     'webpack-dev-server/client?http://localhost:3000'
   ],
-  devtool: 'source-map',
+  devtool: 'eval',
   output: {
       path: path.join(__dirname, 'dist'),
       publicPath: '/dist/',
       filename: 'index.js'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   module: {
     loaders: [
       { 

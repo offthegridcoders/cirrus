@@ -5,8 +5,8 @@ import React, { Component } from 'react'
 export function HelloWorld(props) {
   return (
     <div className="hello-world">
-      <h2>Hello, World!</h2>
-      <p>Also, {props.name}!</p>
+      <h2>Hello, World</h2>
+      <p>Also, {props.name}</p>
     </div>
   )
 }
