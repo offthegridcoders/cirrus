@@ -20,7 +20,7 @@ export class WattsOhmsCalc extends React.Component {
     var results = wattsOhms(event.target.form[0].value, event.target.form[1].value) // returns watts & amps object
     this.setState(results) // sets state with results object
   }
-
+  
   // Renders View
   render() {
     return (

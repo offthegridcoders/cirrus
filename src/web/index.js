@@ -1,6 +1,7 @@
 // Dependencies
 import React from 'react'
 import { render } from 'react-dom'
+import { Router, Route, Link } from 'react-router'
 
 // Components
 import { WattsAmpsCalc } from './components/calculator/watts-amps.js'
@@ -18,15 +19,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="calculator-component">
-        <WattsAmpsCalc/>
-        <VoltsAmpsCalc/>
-        <OhmsVoltsCalc/>
-        <WattsVoltsCalc/>
-        <WattsOhmsCalc/>
+        {this.props.children}
       </div>
     )
   }
 }
 
 // Render app into html
-render(<App />, document.getElementById('app'))
+render((
+  <Router>
+    <Route path="/" component={App}>
+      <Route path="calc" component={WattsAmpsCalc}/>
+    </Route>
+  </Router>
+), document.getElementById('app'))
