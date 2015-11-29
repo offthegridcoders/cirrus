@@ -3,7 +3,11 @@ import React from 'react'
 import { render } from 'react-dom'
 
 // Components
-import { HelloWorld } from './components/hello-world/hello-world.js'
+import { WattsAmpsCalc } from './components/calculator/watts-amps.js'
+import { VoltsAmpsCalc } from './components/calculator/volts-amps.js'
+import { OhmsVoltsCalc } from './components/calculator/ohms-volts.js'
+import { WattsVoltsCalc } from './components/calculator/watts-volts.js'
+import { WattsOhmsCalc } from './components/calculator/watts-ohms.js'
 
 // Component
 class App extends React.Component {
@@ -13,8 +17,12 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className="app">
-        <HelloWorld name="Steve" />
+      <div className="calculator-component">
+        <WattsAmpsCalc/>
+        <VoltsAmpsCalc/>
+        <OhmsVoltsCalc/>
+        <WattsVoltsCalc/>
+        <WattsOhmsCalc/>
       </div>
     )
   }
