@@ -1,0 +1,28 @@
+{
+  "name": "cirrus",
+  "version": "0.0.1",
+  "description": "Cirrus is a react-based app for web and mobile that helps you quit smoking and start vaping.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/offthegridcoders/cirrus.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "vape",
+    "vaping",
+    "ecig",
+    "e-cig",
+    "cirrus"
+  ],
+  "author": "Alex Boerstler <arboerstler@gmail.com> & Stephen Young <steveyoung359@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/offthegridcoders/cirrus/issues"
+  },
+  "homepage": "https://github.com/offthegridcoders/cirrus#readme"
+}
