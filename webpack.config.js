@@ -10,22 +10,33 @@
 var path = require('path');
 var webpack = require('webpack');
 
-// Webpack Config
+// Webpack Config for web
 module.exports = {
-  entry: './src/' + appToBuild + '/index.js',
-  vendors: [
-    'react'
+  entry: [
+    'webpack/hot/only-dev-server',
+    './src/web/index',
+    'webpack-dev-server/client?http://localhost:3000'
   ],
-  devtool: 'cheap-eval-source-map',
+  devtool: 'source-map',
   output: {
-    filename: 'app.js',
-    path: path.join(__dirname, 'dist'),
-    publicPath: '/assets/'
+      path: path.join(__dirname, 'dist'),
+      publicPath: '/static/',
+      filename: 'index.js'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.js$/, loaders: ['babel'], include: path.join(__dirname, 'src') }
+      { 
+        test: /\.css$/, 
+        loader: "style!css!autoprefixer" 
+      },
+      { 
+        test: /\.jsx?$/,
+        include: path.join(__dirname, 'src'),
+        loader: 'babel?presets[]=react,presets[]=es2015'
+      },
     ]
-  },
+  }
 };
