@@ -15,15 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/offthegridcoders/cirrus.git"
   },
-  "keywords": [
-    "react",
-    "react-native",
-    "vape",
-    "vaping",
-    "ecig",
-    "e-cig",
-    "cirrus"
-  ],
+  "keywords": [],
   "author": "Alex Boerstler <arboerstler@gmail.com> & Stephen Young <steveyoung359@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -31,12 +23,18 @@
   },
   "homepage": "https://github.com/offthegridcoders/cirrus#readme",
   "dependencies": {
+    "babel-polyfill": "^6.0.16",
     "react": "^0.14.3"
   },
   "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
     "babel-core": "^6.1.18",
     "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "css-loader": "^0.15.1",
     "path": "^0.12.7",
-    "webpack": "^1.12.9"
+    "style-loader": "^0.12.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.10.1"
   }
 }
