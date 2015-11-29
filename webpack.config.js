@@ -20,7 +20,7 @@ module.exports = {
   devtool: 'source-map',
   output: {
       path: path.join(__dirname, 'dist'),
-      publicPath: '/static/',
+      publicPath: '/dist/',
       filename: 'index.js'
   },
   plugins: [
