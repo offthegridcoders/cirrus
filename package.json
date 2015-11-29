@@ -29,5 +29,12 @@
   "bugs": {
     "url": "https://github.com/offthegridcoders/cirrus/issues"
   },
-  "homepage": "https://github.com/offthegridcoders/cirrus#readme"
+  "homepage": "https://github.com/offthegridcoders/cirrus#readme",
+  "dependencies": {
+    "react": "^0.14.3"
+  },
+  "devDependencies": {
+    "path": "^0.12.7",
+    "webpack": "^1.12.9"
+  }
 }
