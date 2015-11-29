@@ -12,8 +12,8 @@ import { WattsOhmsCalc } from './components/calculator/watts-ohms.js'
 // Component
 class App extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   render() {
     return (
