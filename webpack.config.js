@@ -13,16 +13,19 @@ var webpack = require('webpack');
 // Webpack Config for web
 module.exports = {
   entry: [
-    'babel-polyfill',
-    './src/web',
-    'webpack-dev-server/client?http://localhost:8080'
+    'webpack/hot/only-dev-server',
+    './src/web/index',
+    'webpack-dev-server/client?http://localhost:3000'
   ],
   devtool: 'source-map',
   output: {
       path: path.join(__dirname, 'dist'),
-      publicPath: './dist',
+      publicPath: '/static/',
       filename: 'index.js'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     loaders: [
       { 
@@ -35,8 +38,5 @@ module.exports = {
         loader: 'babel?presets[]=react,presets[]=es2015'
       },
     ]
-  },
-  devServer: {
-    contentBase: "./src"
   }
 };

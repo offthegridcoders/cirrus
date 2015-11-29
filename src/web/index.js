@@ -3,7 +3,7 @@ import React from 'react'
 import { render } from 'react-dom'
 
 // Components
-//import { HelloWorld } from './components/hello-world'
+import { HelloWorld } from './components/hello-world/hello-world.js'
 
 // Component
 class App extends React.Component {
