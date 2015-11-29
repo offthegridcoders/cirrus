@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cirrus - Style Guide</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery.js"></script>
+    <script src="calculator.js"></script>
+  </head>
+  <body>
+    <form id="wattsAmps">
+      <p>Get Wattage and Amperage</p>
+      <label>Resistance <input type="text" placeholder="resistance" value="1.25"></label>
+      <label>Voltage <input type="text" placeholder="voltage" value="2.5"></label>
+      <button type="submit">submit</button>
+    <form>
+    <form id="voltsAmps">
+      <p>Get Voltage and Amperage</p>
+      <label>Resistance <input type="text" placeholder="resistance" value="1.25"></label>
+      <label>Wattage <input type="text" placeholder="wattage" value="5"></label>
+      <button type="submit">submit</button>
+    <form>
+    <form id="ohmsVolts">
+      <p>Get Voltage and Resistance</p>
+      <label>Voltage <input type="text" placeholder="voltage" value="2.5"></label>
+      <label>Resistance <input type="text" placeholder="resistance" value="1.25"></label>
+      <button type="submit">submit</button>
+    <form>
+    <form id="wattageVolts">
+      <p>Get Voltage and Wattage</p>
+      <label>Amperage <input type="text" placeholder="amperage" value="2"></label>
+      <label>Resistance <input type="text" placeholder="resistance" value="1.25"></label>
+      <button type="submit">submit</button>
+    <form>
+    <form id="wattageOhms">
+      <p>Get Wattage and Resistance</p>
+      <label>Voltage <input type="text" placeholder="voltage" value="2.5"></label>
+      <label>Amperage <input type="text" placeholder="amperage" value="2"></label>
+      <button type="submit">submit</button>
+    <form>
+  </body>
+
+  <script>
+    $('#wattsAmps').submit(function(event) {
+      event.preventDefault();
+      console.log(Calculate.wattsAmps(event.target[0].value, event.target[1].value));
+    });
+    $('#voltsAmps').submit(function(event) {
+      event.preventDefault();
+      console.log(Calculate.voltsAmps(event.target[0].value, event.target[1].value));
+    });
+    $('#ohmsVolts').submit(function(event) {
+      event.preventDefault();
+      console.log(Calculate.ohmsVolts(event.target[0].value, event.target[1].value));
+    });
+    $('#wattageVolts').submit(function(event) {
+      event.preventDefault();
+      console.log(Calculate.wattageVolts(event.target[0].value, event.target[1].value));
+    });
+    $('#wattageOhms').submit(function(event) {
+      event.preventDefault();
+      console.log(Calculate.wattageOhms(event.target[0].value, event.target[1].value));
+    });
+  </script>
+</html>
