@@ -8,8 +8,8 @@ import { HelloWorld } from './components/hello-world/hello-world.js'
 // Component
 class App extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {}
   }
   render() {
     return (
