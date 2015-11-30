@@ -2,6 +2,9 @@
 import React from 'react'
 import { render } from 'react-dom'
 
+// Test Component for build system
+import { Test } from './components/test/test.js'
+
 // Components
 import { WattsAmpsCalc } from './components/calculator/watts-amps.js'
 import { VoltsAmpsCalc } from './components/calculator/volts-amps.js'
@@ -18,6 +21,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="calculator-component">
+        <Test/>
         <WattsAmpsCalc/>
         <VoltsAmpsCalc/>
         <OhmsVoltsCalc/>
