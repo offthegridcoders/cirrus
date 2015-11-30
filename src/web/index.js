@@ -2,7 +2,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-// Test Component for build system
+// Test Component for build system. Please don't remove, just set
+// its `enabled` prop to false if its in your way. --AB, 11/30/2015
 import { Test } from './components/test/test.js'
 
 // Components
@@ -21,7 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="calculator-component">
-        <Test/>
+        <Test enabled={false}/>
         <WattsAmpsCalc/>
         <VoltsAmpsCalc/>
         <OhmsVoltsCalc/>
